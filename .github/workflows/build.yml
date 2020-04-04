@@ -33,7 +33,8 @@ jobs:
     - name: packaging
       run: |
         cd wine/dist
-        tar cvfJ ../../wine.tar.xz *
+        tar cvf ../../wine.tar *
+        xz -z -9 ../../wine.tar
     - name: Upload artifact ${{ matrix.version }}
       uses: actions/upload-artifact@v1.0.0
       with:
