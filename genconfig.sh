@@ -51,6 +51,5 @@ args+=(--without-xshm)
 args+=(--without-xslt)
 args+=(--disable-tests)
 args+=(--enable-win64)
-. enabled_dll.sh
 echo ${args[@]}
 exec ./configure ${args[@]} --prefix=$PWD/dist
