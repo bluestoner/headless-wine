@@ -21,10 +21,6 @@ jobs:
       run: git clone git://source.winehq.org/git/wine.git --depth 1 
     - name: install build-essential
       run: sudo apt-get install build-essential flex bison
-    - name: apply patch
-      run: |
-        cd wine
-        git apply $PWD/../headless.patch
     - name: configure
       run: |
         cd wine
